@@ -10,7 +10,7 @@ import { DataService } from './services/data.service';
 })
 export class AppComponent implements OnInit {
   showEmoji: boolean = false;
-  title = 'unit-test-app';
+  title = 'unit-test-angular';
   contentEmoji = ''
   dataSession: any;
   form: FormGroup = new FormGroup({})

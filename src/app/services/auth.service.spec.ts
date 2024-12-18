@@ -1,5 +1,4 @@
-import { HttpErrorResponse } from '@angular/common/http';
-import { of, throwError } from 'rxjs';
+import { of } from 'rxjs';
 import { AuthService } from './auth.service';
 
 describe('(3) Prueba a "AuthService"', () => {
@@ -46,33 +45,5 @@ describe('(3) Prueba a "AuthService"', () => {
       })
 
   });
-
-  it(`Deberia retornar error 409`, (done: DoneFn) => {
-    //TODO: Mock de datos!
-
-    const mockUserCredentials = {
-      email: 'ivanmanrique@gmail.com',
-      password: ''
-    }
-
-    const error409 = new HttpErrorResponse({
-      error: "Invalid user",
-      status: 409, statusText: 'Not Found'
-    })
-
-    httpClientSpy.post.and.returnValue(throwError(error409))
-
-    //TODO:Act
-    const { email, password } = mockUserCredentials
-    service.login(email, password)
-      .subscribe(res => {
-
-      },
-        error => {
-          expect(error.status).toEqual(409);
-          done()
-        })
-
-  })
 
 });

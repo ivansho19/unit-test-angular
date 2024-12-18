@@ -50,3 +50,7 @@
     object-fit: cover;
     border-radius: 100px;
 }
+
+.alert {
+    color: red;
+}

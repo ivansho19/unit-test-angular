@@ -32,12 +32,10 @@
 
   <div *ngIf="dataSession">
     <div class="profile">
-      <img src="https://i.imgur.com/Uuyow3R.jpg" alt="">
+      <img src="https://media.istockphoto.com/id/1371547852/es/foto/hola-y-bienvenida-caja-de-luz-blanca-escrita-sentada-sobre-fondo-azul.jpg?s=1024x1024&w=is&k=20&c=9XGFeIT34owFquqdr5jeYjnHx4O70e5JS2ERFA2uDP8=" alt="">
     </div>
     <div>
-      <h3>{{dataSession | json}}</h3>
+      <h3>{{dataSession?.data?.user}}</h3>
     </div>
   </div>
-
-
 </div>

@@ -45,10 +45,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'unit-test-app'`, () => {
+  it(`should have as title 'unit-test-angular'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('unit-test-app');
+    expect(app.title).toEqual('unit-test-angular');
   });
 
   it('Debe inicializar el formulario y la funcion checkHuman en el ngOnInit', () => {
